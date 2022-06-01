@@ -10,6 +10,7 @@ class AuthorController extends Controller
     public function index(User $author){
         return view('posts', [
             'title' => "Post By Author: $author->name",
+            'active' => '',
             'posts' => $author -> post -> load('category', 'author')
         ]);
     }

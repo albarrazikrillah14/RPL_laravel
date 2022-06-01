@@ -8,7 +8,8 @@ class AboutController extends Controller
 {
     public function index(){
         return view('about',[
-            "title"=> "About",
+            "title"=> "about",
+            'active' => 'about',
             "name"=>"Albarra Zikrillah",
             "email"=>"albarrazikrillah1405@gmail.com",
             "image"=>"albarra.jpg"

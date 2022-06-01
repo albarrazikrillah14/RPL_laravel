@@ -11,7 +11,7 @@ class AboutController extends Controller
             "title"=> "About",
             "name"=>"Albarra Zikrillah",
             "email"=>"albarrazikrillah1405@gmail.com",
-            "image"=>"zikri.jpg"
+            "image"=>"albarra.jpg"
         ]);
     }
 }

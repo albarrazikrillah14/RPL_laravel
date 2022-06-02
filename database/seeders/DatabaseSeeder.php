@@ -39,10 +39,13 @@ class DatabaseSeeder extends Seeder
             'slug' => "web-programming"
         ]);
         Category::create([
-            'name' => 'Personal',
-            'slug' => "Personal"
+            'name' => 'C++',
+            'slug' => "c-plus-plus"
         ]);
-
+        Category::create([
+            'name' => 'Python',
+            'slug' => "python"
+        ]);
         
     }
 }

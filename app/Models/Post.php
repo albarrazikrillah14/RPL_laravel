@@ -3,14 +3,17 @@
 namespace App\Models;
 
 use App\Models\Category;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
     use HasFactory;
+    use Sluggable;
 
-    // protected $fillable =['title', 'excerpt', 'body'];
+    protected $fillable =['title', 'excerpt', 'body'];
     protected $guardged = ['id'];
     protected $with = ['category', 'author'];
     
@@ -46,4 +49,13 @@ class Post extends Model
     {
         return 'slug';
     }
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 }
+
